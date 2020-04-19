@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.unizar.eina.notepadv3" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Notepadv3"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NoteEdit"
+            android:label="@string/title_activity_note_edit"
+            android:parentActivityName=".Notepadv3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Notepadv3" />
+        </activity>
+        <activity
+            android:name=".CatList"
+            android:label="@string/menu_category"
+            android:parentActivityName=".Notepadv3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Notepadv3" />
+        </activity>
+        <activity
+            android:name=".CatEdit"
+            android:label="@string/title_activity_category_edit"
+            android:parentActivityName=".CatList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CatList" />
+        </activity>
+        <activity
+            android:name=".CatFilter"
+            android:label="@string/title_activity_filter_category"
+            android:parentActivityName=".Notepadv3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Notepadv3" />
+        </activity>
+    </application>
+
+</manifest>
